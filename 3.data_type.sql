@@ -43,6 +43,6 @@ select * from author where id between 2 and 4; --지정된 범위도 포함, 위
 select * from author where id not(id < 2 or id > 4);
 select * from author where id in(2,3,4);
 select * from author where id not in(1,5); --전체 데이터가 1~5까지 밖에 없다는 가정.
-
+select * from author where id in(select author_id from post);
 
 
